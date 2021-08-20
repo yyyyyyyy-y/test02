@@ -1,6 +1,6 @@
 <template>
 <div class="outer">
-  <div class="inner inner1">1</div>
+  <div class="inner inner1" @click="aaa">1</div>
   <div class="inner inner2">2</div>
   <div class="inner inner3">3</div>
   <div class="inner inner4">4</div>
@@ -9,7 +9,12 @@
 
 <script>
 export default {
-  name: "index"
+  name: "index",
+  methods:{
+    aaa(){
+      console.log(111);
+    }
+  }
 }
 </script>
 
@@ -28,6 +33,4 @@ export default {
     border: 1px solid green;
   }
 }
-
-
 </style>

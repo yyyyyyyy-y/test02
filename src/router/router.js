@@ -3,11 +3,14 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter)
 
-import layout from "@/views/layout/layout";
+import layout from "@/layout/layout";
 
 const publicRoutes = [
+    //登录
+    { path: '/', name:'login', component: () => import("@/views/login/login"),meta:{title:'登录',icon:"el-icon-edit-outline"} },
+    //首页
     {
-        path:'/',
+        path:'/index',
         component: layout,
         redirect:'/index',
         children:[
